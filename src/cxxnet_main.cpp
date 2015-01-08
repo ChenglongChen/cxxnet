@@ -167,7 +167,7 @@ class CXXNetLearnTask{
       net_type = reset_net_type;
     }
     INetTrainer *net;
-    if (!strncmp(device.c_str(), "gpu", 3)) {
+    if (!strncmp(device.c_str(), "gpu", 3)) {      
       net = cxxnet::CreateNet<mshadow::gpu>( net_type );
     } else {
       net = cxxnet::CreateNet<mshadow::cpu>( net_type );
